@@ -1,0 +1,44 @@
+//Print the following pattern for the given N number of rows.
+
+
+
+Pattern for N = 4
+
+1
+11
+202
+3003
+
+
+
+CODE WITH 3 testcases passed:-
+
+
+
+import java.util.*;
+import java.lang.*;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+
+        double b=0,c=0,d=0;
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        System.out.print("1");
+        System.out.println(" ");
+        
+       
+    for(int i=1;i<n;i++)
+    {
+        b=Math.pow(10,i);
+        //long x=(long)b;
+        c=b*i;
+        d=c+i;
+        long x=(long)d;
+        System.out.print(x);
+        System.out.println(" ");
+    }
+	}
+}
