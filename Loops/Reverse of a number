@@ -1,0 +1,31 @@
+//Write a program to generate the reverse of a given number N. Print the corresponding reverse number.
+//Note : If a number has trailing zeros, then its reverse will not include them. For e.g., reverse of 10400 will be 401 instead of 00401.
+
+
+
+
+import java.util.*;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+
+        int num=0;
+      int reversenum =0;
+      
+      //This statement will capture the user input
+      Scanner in = new Scanner(System.in);
+      //Captured input would be stored in number num
+      num = in.nextInt();
+      //While Loop: Logic to find out the reverse number
+      while( num != 0 )
+      {
+          reversenum = reversenum * 10;
+          reversenum = reversenum + num%10;
+          num = num/10;
+      }
+
+      System.out.println(reversenum);
+	}
+}
