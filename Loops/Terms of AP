@@ -1,0 +1,30 @@
+//Write a program to print first x terms of the series 3N + 2 which are not multiples of 4.
+
+
+
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+    int n,temp;
+	cin>>n;
+        int i=1,j=1;
+    
+    while(i<=n)
+    {
+        temp=3*j+2;
+        if(temp%4!=0)
+        {
+            cout<<temp<<" ";
+            i=i+1;
+        }
+        else
+        {
+            ;
+        }
+        j=j+1;
+        
+    }
+	}
+
