@@ -1,0 +1,69 @@
+Write a program to calculate the total salary of a person. 
+The user has to enter the basic salary (an integer) and the grade (an uppercase character), 
+and depending upon which the total salary is calculated as -
+
+
+totalSalary = basic + hra + da + allow – pf
+
+
+hra   = 20% of basic
+da    = 50% of basic
+allow = 1700 if grade = ‘A’
+allow = 1500 if grade = ‘B’
+allow = 1300 if grade = ‘C' or any other character
+pf    = 11% of basic.
+
+
+Sample Input 1 :
+
+10000 A
+
+Sample Output 1 :
+
+17600
+
+
+Sample Input 2 :
+
+4567 B
+
+Sample Output 2 :
+
+8762
+
+
+JAVA CODE:-
+
+
+
+    import java.util.Scanner;
+    public class Main {
+
+    public static void main(String[] args) {
+    // Write your code here
+    float basic,hra,da,pf,totalsal,allow;
+    String grade;
+    Scanner sc=new Scanner(System.in);
+    basic=sc.nextInt();
+    grade=sc.next();
+
+    hra=(float) (0.2*basic);
+    da=(float) (0.5*basic);
+    pf=(float) (0.11*basic);
+
+    switch(grade)
+    {
+    case "A":allow=1700;
+    break;
+    case "B":allow=1500;
+    break;
+    default:
+    allow=1300;
+    break;
+    }
+    totalsal = (basic + hra + da + allow- pf);
+    System.out.println(Math.round(totalsal));
+
+
+    }
+    }
