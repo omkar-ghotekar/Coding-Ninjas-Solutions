@@ -3,54 +3,46 @@
 
 
 
-#include <iostream>
+Sample Input 1 :
 
-using namespace std;
+3  4
 
-// int main() {
-	// Write your code here
-    
-//     int n,x;
-//     cin>>x;
-//     cout<<" ";
-//     cin>>n;
-//     int b=x;
-//     if(x>=0 && x<=8 && n>=0 && n<=9)
-//     {
-// 	for(int i=1;i<n;i++)
-//     {
-//         x=x*b;
-//     }
-//     }
-//     if(x==0 && n==0)
-//     {
-//         x=1;
-//     }
-//     cout<<x;
-    
-    
-    int power(int x, unsigned int y) 
-{ 
-    if (y == 0) 
-        return 1; 
-    else if (y % 2 == 0) 
-        return power(x, y / 2) * power(x, y / 2); 
-    else
-        return x * power(x, y / 2) * power(x, y / 2); 
-} 
- 
-  
-/* Driver code */
-int main() 
-{ 
-     
-    int x;
-    cin>>x;
-    cout<<" ";
-    unsigned int y ;
-    cin>>y;
-  
-    cout << power(x, y); 
-    return 0; 
-} 
+Sample Output 1 :
 
+81
+
+
+Sample Input 2 
+
+
+2  5
+
+Sample Output 2 :
+
+32
+
+
+JAVA CODE:-
+
+
+import java.util.Scanner;
+public class Solution {
+   
+    public static void main(String[] args) {
+        // Write your code here
+        int x,n;
+Scanner sc=new Scanner(System.in);
+x=sc.nextInt();
+n=sc.nextInt();
+if(x==0 && n==0)
+{
+System.out.println(1);
+}
+else
+{
+System.out.println((int)Math.pow(x, n));
+}
+
+       
+    }
+}
